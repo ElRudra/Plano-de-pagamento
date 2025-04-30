@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Pagamento - Medicina Veterinária</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 1rem;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-2">Planos de Pagamento</h1>
+            <h2 class="text-xl md:text-2xl text-gray-600">Medicina Veterinária - Integral</h2>
+            <div class="w-24 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <!-- FIES Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                <div class="bg-indigo-600 p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold">FIES</h3>
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <p class="text-indigo-100 mt-1">Financiamento Estudantil</p>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-users text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Total de Contratos</p>
+                            <p class="font-bold text-gray-800">32</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-money-bill-wave text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Valor Médio</p>
+                            <p class="font-bold text-gray-800">R$ 39.660,54</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-percentage text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Taxa Média</p>
+                            <p class="font-bold text-gray-800">R$ 279,28</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center">
+                            Ver detalhes <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CREDIES Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                <div class="bg-green-600 p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold">CREDIES</h3>
+                        <i class="fas fa-hand-holding-usd text-2xl"></i>
+                    </div>
+                    <p class="text-green-100 mt-1">Crédito Educacional</p>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-users text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Total de Contratos</p>
+                            <p class="font-bold text-gray-800">3</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-money-bill-wave text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Valor Médio</p>
+                            <p class="font-bold text-gray-800">R$ 4.106,50</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-calendar-alt text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Parcelas</p>
+                            <p class="font-bold text-gray-800">5-6 meses</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+                            Ver detalhes <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MINUTA Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                <div class="bg-blue-600 p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold">MINUTA</h3>
+                        <i class="fas fa-file-alt text-2xl"></i>
+                    </div>
+                    <p class="text-blue-100 mt-1">Pré-contratos</p>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-users text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Total de Contratos</p>
+                            <p class="font-bold text-gray-800">12</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-tag text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Modalidades</p>
+                            <p class="font-bold text-gray-800">Social/Convencional</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-hourglass-half text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Status</p>
+                            <p class="font-bold text-gray-800">Inscritos</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            Ver detalhes <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUTRA IES Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                <div class="bg-purple-600 p-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold">OUTRA IES</h3>
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <p class="text-purple-100 mt-1">Transferências</p>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-users text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Total de Contratos</p>
+                            <p class="font-bold text-gray-800">4</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-random text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Tipos</p>
+                            <p class="font-bold text-gray-800">Social/Convencional</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-info-circle text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Status</p>
+                            <p class="font-bold text-gray-800">Variados</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#" class="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+                            Ver detalhes <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Tables Section -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Detalhamento por Plano</h2>
+            
+            <!-- FIES Table -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-indigo-600 px-6 py-4 text-white">
+                    <h3 class="text-lg font-bold flex items-center">
+                        <i class="fas fa-file-contract mr-3"></i> FIES - Contratos Ativos
+                    </h3>
+                </div>
+                <div class="overflow-x-auto scrollbar-hide">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPF</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Taxa</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vencimento</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">093.498.593-60</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ANA BEATRIZ MOURA FRANCA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39.660,54</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 279,28</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">07/04/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">061.530.223-83</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ANTONIO RUAN RAMOS MONTENEGRO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39.660,54</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 279,28</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">04/04/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">118.193.203-32</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CARLOS ANDREY MOURA DE CASTRO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39.660,54</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 279,28</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">04/04/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">096.493.243-13</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">DÉBORA CARVALHO CARDOSO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39.295,08</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 340,19</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">04/04/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">085.442.503-94</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ERIK GOMES CASTRO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 39.603,06</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 288,86</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">25/03/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 text-right">
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900 font-medium">Ver todos os 32 contratos →</a>
+                </div>
+            </div>
+
+            <!-- CREDIES Table -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-green-600 px-6 py-4 text-white">
+                    <h3 class="text-lg font-bold flex items-center">
+                        <i class="fas fa-hand-holding-usd mr-3"></i> CREDIES - Pagamentos
+                    </h3>
+                </div>
+                <div class="overflow-x-auto scrollbar-hide">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">RA</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPF</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parcelas</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1º Pagamento</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000013</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">081.051.063-45</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">JOAO VICTOR RODRIGUES TABOSA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 4.106,50</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">21/03/2025</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000076</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">072.444.593-51</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">LARA CHARLES DE SOUSA ARAÚJO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 4.106,50</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">03/04/2025</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000002</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">603.486.803-33</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">PEDRO FERNANDO BARROS PINHEIRO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">R$ 3.422,08</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">24/03/2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MINUTA Table -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                <div class="bg-blue-600 px-6 py-4 text-white">
+                    <h3 class="text-lg font-bold flex items-center">
+                        <i class="fas fa-file-alt mr-3"></i> MINUTA - Pré-contratos
+                    </h3>
+                </div>
+                <div class="overflow-x-auto scrollbar-hide">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">RA</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPF</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modalidade</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000065</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">093.115.633-58</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ALAN RODRIGUES SOUSA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOCIAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-yellow-100 text-yellow-800 status-badge">Inscrito</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2023222256</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">626.141.203-08</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ANA HERIKA SILVA RODRIGUES</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOCIAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-yellow-100 text-yellow-800 status-badge">Inscrito</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000072</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">090.077.983-75</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ANYELLE TEIXEIRA GOES</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOCIAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-yellow-100 text-yellow-800 status-badge">Inscrito</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4240000074</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">096.240.863-89</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CAIO BRENO MUNIZ MARQUES</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CONVENCIONAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-yellow-100 text-yellow-800 status-badge">Inscrito</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-6 py-4 bg-gray-50 text-right">
+                    <a href="#" class="text-blue-600 hover:text-blue-900 font-medium">Ver todos os 12 pré-contratos →</a>
+                </div>
+            </div>
+
+            <!-- OUTRA IES Table -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="bg-purple-600 px-6 py-4 text-white">
+                    <h3 class="text-lg font-bold flex items-center">
+                        <i class="fas fa-university mr-3"></i> OUTRA IES - Transferências
+                    </h3>
+                </div>
+                <div class="overflow-x-auto scrollbar-hide">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">RA</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CPF</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">FIES</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2023220709</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">052.527.753-62</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ANA CLARA FERNANDES BARBOSA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CONVENCIONAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SUSPENSÃO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Aprovado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1960003103</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">095.583.583-63</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BIANCA SOUSA SILVA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOCIAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">EXTEMPORÂNEO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-blue-100 text-blue-800 status-badge">2024.2</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2023222257</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">163.429.447-50</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CAIO MARCELO CAMELO DO PRADO</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CONVENCIONAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOLICITADO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2023222143</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">083.432.593-43</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MATEUS RONALD RODRIGUES TEIXEIRA</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOCIAL</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">SOLICITADO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="bg-green-100 text-green-800 status-badge">Contratado</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Resumo Geral</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-indigo-600 font-medium">FIES</p>
+                            <p class="text-2xl font-bold text-gray-800 mt-1">32</p>
+                        </div>
+                        <div class="bg-indigo-100 p-3 rounded-full">
+                            <i class="fas fa-file-contract text-indigo-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-indigo-100">
+                        <p class="text-xs text-indigo-600">R$ 1.269.137,28 total</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-green-600 font-medium">CREDIES</p>
+                            <p class="text-2xl font-bold text-gray-800 mt-1">3</p>
+                        </div>
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i class="fas fa-hand-holding-usd text-green-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-green-100">
+                        <p class="text-xs text-green-600">R$ 11.635,08 total</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-blue-600 font-medium">MINUTA</p>
+                            <p class="text-2xl font-bold text-gray-800 mt-1">12</p>
+                        </div>
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="fas fa-file-alt text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-blue-100">
+                        <p class="text-xs text-blue-600">8 Social / 4 Convencional</p>
+                    </div>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg border border-purple-100">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-purple-600 font-medium">OUTRA IES</p>
+                            <p class="text-2xl font-bold text-gray-800 mt-1">4</p>
+                        </div>
+                        <div class="bg-purple-100 p-3 rounded-full">
+                            <i class="fas fa-university text-purple-600"></i>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-purple-100">
+                        <p class="text-xs text-purple-600">2 Social / 2 Convencional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Calendar -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Calendário de Pagamentos</h2>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-medium">Exportar</button>
+                    <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">Filtrar</button>
+                </div>
+            </div>
+            <div class="overflow-x-auto scrollbar-hide">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/05</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/06</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/07</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/08</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/09</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">15/10</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ANA BEATRIZ MOURA FRANCA</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ANTONIO RUAN RAMOS MONTENEGRO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">CARLOS ANDREY MOURA DE CASTRO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">DÉBORA CARVALHO CARDOSO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ERIK GOMES CASTRO</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-red-100 text-red-800 status-badge">Pendente</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <span class="bg-gray-100 text-gray-800 status-badge">-</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Universidade Veterinária</h3>
+                    <p class="text-gray-400">Departamento Financeiro</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 Todos os direitos reservados. Dados atualizados em 15/11/2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle potential interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event to all "Ver detalhes" links
+            const detailLinks = document.querySelectorAll('a[href="#"]');
+            detailLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const cardTitle = this.closest('.card-hover').querySelector('h3').textContent;
+                    alert(`Você clicou para ver detalhes de ${cardTitle}`);
+                });
+            });
+            
+            // Add hover effect to table rows
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.transition = 'background-color 0.2s ease';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
